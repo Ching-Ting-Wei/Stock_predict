@@ -16,13 +16,13 @@ def denormalize(original_data, scaled_data):
 filename = input('Input the csv file name: ')
 input_directory = os.path.abspath("../csv") + '/'
 df = pd.read_csv(input_directory + filename)
-df = df.drop(['dividend', 'PE', 'netWorth', 'diff'], axis=1)
+df = df.drop(['data','diff','result'], axis=1)
 split_boundary = 2000
 
 train_data = df.head(split_boundary)
 test_data_reverse_date = df.tail(df.shape[0] - split_boundary)
 
-train_data = train_data.drop(['date'], axis=1)
+#train_data = train_data.drop(['date'], axis=1)
 train_data_scaled = normalize(train_data)
 
 X_train = []   #預測點的前 60 天的資料
@@ -37,7 +37,7 @@ for i in range(interval, train_data.shape[0]):
 X_train = np.array(X_train)
 Y_train = np.array(Y_train)
 
-test_data = test_data_reverse_date.drop(["date"], axis=1)
+test_data = test_data_reverse_date#.drop(["date"], axis=1)
 test_data_scaled = normalize(test_data)
 X_test = []  
 Y_test = np.empty(shape=[0, 1])
@@ -94,6 +94,10 @@ regressor.compile(optimizer = 'adam', loss = 'mean_squared_error')
 regressor.fit(X_train, Y_train, epochs = 100, batch_size = 32)
 
 predicted_stock_price = regressor.predict(X_test)
+print("Ytest")
+print(Y_test)
+print("Predicted")
+print(predicted_stock_price)
 
 predicted_stock_price = pd.DataFrame(predicted_stock_price)
 
@@ -112,13 +116,13 @@ output_filename = output_directory + "/LSTM_" + str(interval) + '_' + filename
 backup_test.to_csv(output_filename, header = True, index = False)
 
 # Visualising the results
-plt.plot(Y_test, color = 'red', label = 'Real Google Stock Price')  # 紅線表示真實股價
-plt.plot(predicted_stock_price, color = 'blue', label = 'Predicted Google Stock Price')  # 藍線表示預測股價
-plt.title('Google Stock Price Prediction')
-plt.xlabel('Time')
-plt.ylabel('Google Stock Price')
-plt.legend()
-plt.show()
+# plt.plot(Y_test, color = 'red', label = 'Real Google Stock Price')  # 紅線表示真實股價
+# plt.plot(predicted_stock_price, color = 'blue', label = 'Predicted Google Stock Price')  # 藍線表示預測股價
+# plt.title('Google Stock Price Prediction')
+# plt.xlabel('Time')
+# plt.ylabel('Google Stock Price')
+# plt.legend()
+# plt.show()
 
 # attributes_train, attributes_test, label_train, label_test = train_test_split(attributes, label)
 # scaler = StandardScaler()

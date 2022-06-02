@@ -20,26 +20,37 @@ def calKDJ(df):
     return df
 
 def drawKDJ():
-    df = pd.read_csv('csv/2454.csv')
+    stock_list = []
+    while True:
+        stock = input("please input the stock number: ")
+        if stock=="-1":
+            break
+        stock_list.append(stock)
+        print("end of input? input -1")
     
-    stockDataFrame = calKDJ(df)
-    print(stockDataFrame)
-    # 開始繪圖
-    plt.figure()
-    # stockDataFrame['K'].plot(color="blue",label='K')
-    # stockDataFrame['D'].plot(color="green",label='D')
-    stockDataFrame['J'].plot(color="purple",label='J')
-    stockDataFrame.to_csv('2454_test2.csv',mode ='a', header = True)
-    plt.legend(loc='best')         # 繪製圖例
-    # 設置x軸坐標的標籤和旋轉角度    
-    major_index=stockDataFrame.index[stockDataFrame.index%10==0]
-    major_xtics=stockDataFrame['date'][stockDataFrame.index%10==0]
-    plt.xticks(major_index,major_xtics)
-    plt.setp(plt.gca().get_xticklabels(), rotation=30)
-    # 帶網格線，且設置了網格樣式
-    plt.grid(linestyle='-.')
-    plt.title("金石資源的KDJ圖")
-    plt.rcParams['font.sans-serif']=['SimHei']
-    plt.show()
+    for stock in stock_list:
+        stk_pos = "csv/" + stock + "_all.csv"
+        out_pos = "csv/" + stock + "_.csv"
+        df = pd.read_csv(stk_pos)
+        
+        stockDataFrame = calKDJ(df)
+        # print(stockDataFrame)
+        # 開始繪圖
+        # plt.figure()
+        # stockDataFrame['K'].plot(color="blue",label='K')
+        # stockDataFrame['D'].plot(color="green",label='D')
+        stockDataFrame['J'].plot(color="purple",label='J')
+        stockDataFrame.to_csv(out_pos,mode ='a', header = True)
+        # plt.legend(loc='best')         # 繪製圖例
+        # 設置x軸坐標的標籤和旋轉角度    
+        # major_index=stockDataFrame.index[stockDataFrame.index%10==0]
+        # major_xtics=stockDataFrame['date'][stockDataFrame.index%10==0]
+        # plt.xticks(major_index,major_xtics)
+        # plt.setp(plt.gca().get_xticklabels(), rotation=30)
+        # 帶網格線，且設置了網格樣式
+        # plt.grid(linestyle='-.')
+        # plt.title("金石資源的KDJ圖")
+        # plt.rcParams['font.sans-serif']=['SimHei']
+        # plt.show()
 # 調用方法
 drawKDJ()
