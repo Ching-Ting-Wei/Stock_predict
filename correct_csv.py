@@ -1,5 +1,5 @@
 stock = input("input the stock name:")
-stock_pos = "csv/" + stock + "_.csv"
+stock_pos = "csv/" + stock + ".csv"
 f = open(stock_pos,'r',encoding='utf-8')
 # f = open("2454_test2.csv",'r',encoding='utf-8')
 
