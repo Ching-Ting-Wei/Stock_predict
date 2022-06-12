@@ -66,7 +66,11 @@ def profit(df,signal):#df is original input data (from csv file and make close m
                 current=0
         previous=signal.iloc[i]#前一天是要買還是賣
     return money
+fscore_m = []
+fscore_s =[]
 money = []
+mat = []
+score = pd.DataFrame()
 stock_list = [1210,1231,2344,2449,2603,2633,3596,1215,1232,2345,2454,2607,2634,3682,1216,1434,2379,2455,2609,2637,4904,1218,1702,2408,2459,2610,3034,5388,1227,2330,2412,2468,2615,3035,1229,2337,2439,2498,2618,3045]
 for stock in stock_list:
   print(stock)
@@ -97,11 +101,23 @@ for stock in stock_list:
   nor_attr_train = scaler.transform(attributes_train)
   scaler.fit(attributes_test)
   nor_attr_test = scaler.transform(attributes_test)
+  from numpy import mean
+  from numpy import std
   mlp = MLPClassifier(hidden_layer_sizes=(13), max_iter=15000)
+  n_score = cross_val_score(
+  mlp, attributes, label, scoring='f1_macro', cv=10, n_jobs=-1, error_score='raise')
+#   print('F-Score: %.3f (%.3f)' % (mean(n_score), std(n_score)))
+
+  
   mlp.fit(nor_attr_train,label_train)
+  fscore_m.append(mean(n_score))
+  fscore_s.append(std(n_score))
   predictions = mlp.predict(nor_attr_test)
-  money.append(profit(original,predictions)) 
-  m=mathew(label_test,predictions)
+  from sklearn.metrics import classification_report, confusion_matrix
+  m = mathew(label_test, predictions)
+  mat.append(m)
+  money.append(profit(original, predictions))
+
   f.write(str(confusion_matrix(label_test,predictions)))
   f.write('\n')
   f.write(str(classification_report(label_test,predictions)))
@@ -113,7 +129,20 @@ for stock in stock_list:
   Prediction_result["Prediction_Result"]=predictions
 
   Prediction_result.to_csv(csv_file,mode ='w', header = True)
+  result = classification_report(label_test, predictions,output_dict=True)
+  score1 = pd.DataFrame(result).transpose()
+  ndf = score1.unstack().to_frame().T
+  ndf.columns = ndf.columns.map('{0[0]}_{0[1]}'.format) 
+  score = pd.concat([score, ndf], ignore_index = True, axis = 0)
   #plt.show()
 d = {'stockID': stock_list, 'profit': money}
 result = pd.DataFrame(data=d)
 result.to_csv("output/profit.csv",header = True, index = False,mode='w')
+d = {'stockID': stock_list, 'profit': money}
+p = pd.DataFrame(data=d)
+p.to_csv("output/profit.csv", header=True, index=False, mode='a')
+score.insert(loc=0, column='StockName', value=stock_list)
+score['Matthew']=mat
+score['10F-Score-mean']=fscore_m
+score['10F-Score-std']=fscore_s
+score.to_csv("precisionRate_bag.csv",header = True, index = False,mode='w')

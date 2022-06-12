@@ -74,7 +74,7 @@ for stock in stock_list:
     #csv_file = "../csv/pridiction_result/" + str(stock) + ".csv"
     df = pd.read_csv(input_file)
     f = open(output_file, 'w', encoding='utf-8')
-    original = df
+    original = df.copy(deep=True)
     df = smoothCut(df,10)
     #df = df.fillna(0)
     CurrentCustomers=df.head(int(len(df)*0.9))

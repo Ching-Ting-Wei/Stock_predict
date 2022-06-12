@@ -1,6 +1,9 @@
 import matplotlib
 import numpy as np
 import pandas as pd
+import math
+from numpy import mean
+from numpy import std
 from sklearn.metrics import classification_report, confusion_matrix
 from matplotlib import pyplot as plt
 from sklearn.metrics import classification_report,confusion_matrix
@@ -55,7 +58,11 @@ def profit(df,signal):#df is original input data (from csv file and make close m
                 current=0
         previous=signal.iloc[i]#前一天是要買還是賣
     return money
+fscore_m = []
+fscore_s =[]
 money = []
+mat = []
+score = pd.DataFrame()
 stock_list = [1210,1231,2344,2449,2603,2633,3596,1215,1232,2345,2454,2607,2634,3682,1216,1434,2379,2455,2609,2637,4904,1218,1702,2408,2459,2610,3034,5388,1227,2330,2412,2468,2615,3035,1229,2337,2439,2498,2618,3045]
 for stock in stock_list:
     print(stock)
@@ -78,9 +85,15 @@ for stock in stock_list:
     label = CurrentCustomers['result']
 
     DT = DecisionTreeClassifier(criterion='entropy')
+    # n_score = cross_val_score(
+    #     DT, attributes, label, scoring='f1_macro', cv=10, n_jobs=-1, error_score='raise')
+    # print('F-Score: %.3f (%.3f)' % (mean(n_score), std(n_score)))
+
     #print(DT)
 
     scores = cross_val_score(DT, attributes, label, cv=7, scoring='f1_macro',n_jobs=1)
+    fscore_m.append(mean(scores))
+    fscore_s.append(std(scores))
     #print(scores)
     #print("F-score: %0.2f (+/= % 0.2f)" % (scores.mean(),scores.std()*2))
 
@@ -93,6 +106,9 @@ for stock in stock_list:
     test_attributes = NewCustomers.drop(['X','data','diff','result'],axis=1)
     test_label = NewCustomers['result']
     y_prediction = DT_Model.predict(test_attributes)
+    from sklearn.metrics import classification_report, confusion_matrix
+    m = mathew(test_label, y_prediction)
+    mat.append(m)
     money.append(profit(original,y_prediction)) 
     m=mathew(test_label,y_prediction)
     f.write(str(confusion_matrix(test_label,y_prediction)))
@@ -110,6 +126,19 @@ for stock in stock_list:
 
     Prediction_result.to_csv(csv_file,mode ='w', header = True)
     #plt.show()
+    result = classification_report(test_label, y_prediction,output_dict=True)
+    score1 = pd.DataFrame(result).transpose()
+    ndf = score1.unstack().to_frame().T
+    ndf.columns = ndf.columns.map('{0[0]}_{0[1]}'.format) 
+    score = pd.concat([score, ndf], ignore_index = True, axis = 0)
 d = {'stockID': stock_list, 'profit': money}
 result = pd.DataFrame(data=d)
 result.to_csv("output/profit.csv",header = True, index = False,mode='a')
+d = {'stockID': stock_list, 'profit': money}
+p = pd.DataFrame(data=d)
+p.to_csv("output/profit.csv", header=True, index=False, mode='a')
+score.insert(loc=0, column='StockName', value=stock_list)
+score['Matthew']=mat
+score['10F-Score-mean']=fscore_m
+score['10F-Score-std']=fscore_s
+score.to_csv("precisionRate_decision_tree.csv",header = True, index = False,mode='w')

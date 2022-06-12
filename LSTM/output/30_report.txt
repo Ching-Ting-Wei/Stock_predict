@@ -1,0 +1,615 @@
+=======1210_index=======
+[[102  24]
+ [ 18 121]]
+              precision    recall  f1-score   support
+
+         0.0       0.85      0.81      0.83       126
+         1.0       0.83      0.87      0.85       139
+
+    accuracy                           0.84       265
+   macro avg       0.84      0.84      0.84       265
+weighted avg       0.84      0.84      0.84       265
+
+Mean Absolute Error: 0.7273331483085201
+Mean Squared Error: 0.7981022170794709
+Root Mean Squared Error: 0.893365668178194
+=======1215_index=======
+[[ 91  22]
+ [ 23 129]]
+              precision    recall  f1-score   support
+
+         0.0       0.80      0.81      0.80       113
+         1.0       0.85      0.85      0.85       152
+
+    accuracy                           0.83       265
+   macro avg       0.83      0.83      0.83       265
+weighted avg       0.83      0.83      0.83       265
+
+Mean Absolute Error: 0.7458393577719638
+Mean Squared Error: 1.1409142588851533
+Root Mean Squared Error: 1.0681358803472305
+=======1216_index=======
+[[ 98  25]
+ [ 32 110]]
+              precision    recall  f1-score   support
+
+         0.0       0.75      0.80      0.77       123
+         1.0       0.81      0.77      0.79       142
+
+    accuracy                           0.78       265
+   macro avg       0.78      0.79      0.78       265
+weighted avg       0.79      0.78      0.79       265
+
+Mean Absolute Error: 1.3466543406360558
+Mean Squared Error: 2.6168634355505813
+Root Mean Squared Error: 1.6176722274770563
+=======1218_index=======
+[[100  14]
+ [ 23 128]]
+              precision    recall  f1-score   support
+
+         0.0       0.81      0.88      0.84       114
+         1.0       0.90      0.85      0.87       151
+
+    accuracy                           0.86       265
+   macro avg       0.86      0.86      0.86       265
+weighted avg       0.86      0.86      0.86       265
+
+Mean Absolute Error: 0.6841282599107275
+Mean Squared Error: 0.508762580786942
+Root Mean Squared Error: 0.7132759499569168
+=======1227_index=======
+[[134  27]
+ [ 18  86]]
+              precision    recall  f1-score   support
+
+         0.0       0.88      0.83      0.86       161
+         1.0       0.76      0.83      0.79       104
+
+    accuracy                           0.83       265
+   macro avg       0.82      0.83      0.82       265
+weighted avg       0.83      0.83      0.83       265
+
+Mean Absolute Error: 0.29155947991137243
+Mean Squared Error: 0.15325820085293762
+Root Mean Squared Error: 0.39148205687226284
+=======1229_index=======
+[[ 77  18]
+ [ 13 157]]
+              precision    recall  f1-score   support
+
+         0.0       0.86      0.81      0.83        95
+         1.0       0.90      0.92      0.91       170
+
+    accuracy                           0.88       265
+   macro avg       0.88      0.87      0.87       265
+weighted avg       0.88      0.88      0.88       265
+
+Mean Absolute Error: 0.6182509719560729
+Mean Squared Error: 0.679688487684749
+Root Mean Squared Error: 0.8244322214013405
+=======1231_index=======
+[[ 77  16]
+ [ 33 139]]
+              precision    recall  f1-score   support
+
+         0.0       0.70      0.83      0.76        93
+         1.0       0.90      0.81      0.85       172
+
+    accuracy                           0.82       265
+   macro avg       0.80      0.82      0.80       265
+weighted avg       0.83      0.82      0.82       265
+
+Mean Absolute Error: 1.0012393712457623
+Mean Squared Error: 1.6643359449982855
+Root Mean Squared Error: 1.2900914483083303
+=======1232_index=======
+[[ 97  28]
+ [ 22 118]]
+              precision    recall  f1-score   support
+
+         0.0       0.82      0.78      0.80       125
+         1.0       0.81      0.84      0.83       140
+
+    accuracy                           0.81       265
+   macro avg       0.81      0.81      0.81       265
+weighted avg       0.81      0.81      0.81       265
+
+Mean Absolute Error: 3.578986194538621
+Mean Squared Error: 15.144844568069184
+Root Mean Squared Error: 3.8916377745197694
+=======1434_index=======
+[[127  16]
+ [ 11 109]]
+              precision    recall  f1-score   support
+
+         0.0       0.92      0.89      0.90       143
+         1.0       0.87      0.91      0.89       120
+
+    accuracy                           0.90       263
+   macro avg       0.90      0.90      0.90       263
+weighted avg       0.90      0.90      0.90       263
+
+Mean Absolute Error: 0.0935966053661742
+Mean Squared Error: 0.01681080022413567
+Root Mean Squared Error: 0.12965647004347938
+=======1702_index=======
+[[111  17]
+ [ 23 114]]
+              precision    recall  f1-score   support
+
+         0.0       0.83      0.87      0.85       128
+         1.0       0.87      0.83      0.85       137
+
+    accuracy                           0.85       265
+   macro avg       0.85      0.85      0.85       265
+weighted avg       0.85      0.85      0.85       265
+
+Mean Absolute Error: 0.708693857444907
+Mean Squared Error: 0.6748595948759875
+Root Mean Squared Error: 0.8214983839764918
+=======2330_index=======
+[[102  20]
+ [ 27 116]]
+              precision    recall  f1-score   support
+
+         0.0       0.79      0.84      0.81       122
+         1.0       0.85      0.81      0.83       143
+
+    accuracy                           0.82       265
+   macro avg       0.82      0.82      0.82       265
+weighted avg       0.82      0.82      0.82       265
+
+Mean Absolute Error: 9.086493449660969
+Mean Squared Error: 180.53770113284693
+Root Mean Squared Error: 13.436431860164623
+=======2337_index=======
+[[106  23]
+ [ 19 116]]
+              precision    recall  f1-score   support
+
+         0.0       0.85      0.82      0.83       129
+         1.0       0.83      0.86      0.85       135
+
+    accuracy                           0.84       264
+   macro avg       0.84      0.84      0.84       264
+weighted avg       0.84      0.84      0.84       264
+
+Mean Absolute Error: 1.0642389690514766
+Mean Squared Error: 1.661894852478617
+Root Mean Squared Error: 1.2891450083208704
+=======2344_index=======
+[[ 92  13]
+ [ 18 142]]
+              precision    recall  f1-score   support
+
+         0.0       0.84      0.88      0.86       105
+         1.0       0.92      0.89      0.90       160
+
+    accuracy                           0.88       265
+   macro avg       0.88      0.88      0.88       265
+weighted avg       0.88      0.88      0.88       265
+
+Mean Absolute Error: 1.0701721156858046
+Mean Squared Error: 1.5733085108519567
+Root Mean Squared Error: 1.2543159533594224
+=======2345_index=======
+[[122  18]
+ [ 15 110]]
+              precision    recall  f1-score   support
+
+         0.0       0.89      0.87      0.88       140
+         1.0       0.86      0.88      0.87       125
+
+    accuracy                           0.88       265
+   macro avg       0.87      0.88      0.88       265
+weighted avg       0.88      0.88      0.88       265
+
+Mean Absolute Error: 14.719351760576355
+Mean Squared Error: 254.18661897391289
+Root Mean Squared Error: 15.943231133428156
+=======2379_index=======
+[[ 74  22]
+ [ 21 148]]
+              precision    recall  f1-score   support
+
+         0.0       0.78      0.77      0.77        96
+         1.0       0.87      0.88      0.87       169
+
+    accuracy                           0.84       265
+   macro avg       0.82      0.82      0.82       265
+weighted avg       0.84      0.84      0.84       265
+
+Mean Absolute Error: 8.193443672612027
+Mean Squared Error: 115.09017998035364
+Root Mean Squared Error: 10.728009134054354
+=======2408_index=======
+[[108  20]
+ [ 16 120]]
+              precision    recall  f1-score   support
+
+         0.0       0.87      0.84      0.86       128
+         1.0       0.86      0.88      0.87       136
+
+    accuracy                           0.86       264
+   macro avg       0.86      0.86      0.86       264
+weighted avg       0.86      0.86      0.86       264
+
+Mean Absolute Error: 2.3910043947624438
+Mean Squared Error: 7.340530382597968
+Root Mean Squared Error: 2.709341318955212
+=======2412_index=======
+[[ 71  39]
+ [ 23 129]]
+              precision    recall  f1-score   support
+
+         0.0       0.76      0.65      0.70       110
+         1.0       0.77      0.85      0.81       152
+
+    accuracy                           0.76       262
+   macro avg       0.76      0.75      0.75       262
+weighted avg       0.76      0.76      0.76       262
+
+Mean Absolute Error: 0.8592104962763893
+Mean Squared Error: 0.9651481866986727
+Root Mean Squared Error: 0.9824195573677637
+=======2412_index=======
+[[ 71  39]
+ [ 25 127]]
+              precision    recall  f1-score   support
+
+         0.0       0.74      0.65      0.69       110
+         1.0       0.77      0.84      0.80       152
+
+    accuracy                           0.76       262
+   macro avg       0.75      0.74      0.74       262
+weighted avg       0.75      0.76      0.75       262
+
+Mean Absolute Error: 0.6350000104831374
+Mean Squared Error: 0.5683595722685617
+Root Mean Squared Error: 0.7538962609461343
+=======2439_index=======
+[[154  16]
+ [ 24  71]]
+              precision    recall  f1-score   support
+
+         0.0       0.87      0.91      0.89       170
+         1.0       0.82      0.75      0.78        95
+
+    accuracy                           0.85       265
+   macro avg       0.84      0.83      0.83       265
+weighted avg       0.85      0.85      0.85       265
+
+Mean Absolute Error: 1.2254171142578123
+Mean Squared Error: 2.6561179185696826
+Root Mean Squared Error: 1.6297600800638365
+=======2449_index=======
+[[ 76  18]
+ [ 17 154]]
+              precision    recall  f1-score   support
+
+         0.0       0.82      0.81      0.81        94
+         1.0       0.90      0.90      0.90       171
+
+    accuracy                           0.87       265
+   macro avg       0.86      0.85      0.86       265
+weighted avg       0.87      0.87      0.87       265
+
+Mean Absolute Error: 0.9551964030715654
+Mean Squared Error: 1.6280665973823696
+Root Mean Squared Error: 1.2759571299155663
+=======2454_index=======
+[[ 76  23]
+ [ 28 138]]
+              precision    recall  f1-score   support
+
+         0.0       0.73      0.77      0.75        99
+         1.0       0.86      0.83      0.84       166
+
+    accuracy                           0.81       265
+   macro avg       0.79      0.80      0.80       265
+weighted avg       0.81      0.81      0.81       265
+
+Mean Absolute Error: 11.700091253316629
+Mean Squared Error: 236.78424967829966
+Root Mean Squared Error: 15.387795478180092
+=======2455_index=======
+[[ 94  21]
+ [ 14 131]]
+              precision    recall  f1-score   support
+
+         0.0       0.87      0.82      0.84       115
+         1.0       0.86      0.90      0.88       145
+
+    accuracy                           0.87       260
+   macro avg       0.87      0.86      0.86       260
+weighted avg       0.87      0.87      0.86       260
+
+Mean Absolute Error: 1.9169547177828274
+Mean Squared Error: 4.998629564851938
+Root Mean Squared Error: 2.235761517884217
+=======2459_index=======
+[[ 97  24]
+ [ 15 128]]
+              precision    recall  f1-score   support
+
+         0.0       0.87      0.80      0.83       121
+         1.0       0.84      0.90      0.87       143
+
+    accuracy                           0.85       264
+   macro avg       0.85      0.85      0.85       264
+weighted avg       0.85      0.85      0.85       264
+
+Mean Absolute Error: 0.4954048023801859
+Mean Squared Error: 0.34391715494095126
+Root Mean Squared Error: 0.5864445028653191
+=======2468_index=======
+[[ 97  19]
+ [ 21 128]]
+              precision    recall  f1-score   support
+
+         0.0       0.82      0.84      0.83       116
+         1.0       0.87      0.86      0.86       149
+
+    accuracy                           0.85       265
+   macro avg       0.85      0.85      0.85       265
+weighted avg       0.85      0.85      0.85       265
+
+Mean Absolute Error: 0.07638674293374113
+Mean Squared Error: 0.013942422356302591
+Root Mean Squared Error: 0.11807803502896969
+=======2498_index=======
+[[104  21]
+ [ 13 127]]
+              precision    recall  f1-score   support
+
+         0.0       0.89      0.83      0.86       125
+         1.0       0.86      0.91      0.88       140
+
+    accuracy                           0.87       265
+   macro avg       0.87      0.87      0.87       265
+weighted avg       0.87      0.87      0.87       265
+
+Mean Absolute Error: 1.2792552124599241
+Mean Squared Error: 7.318356206036525
+Root Mean Squared Error: 2.7052460527716375
+=======2603_index=======
+[[ 74  21]
+ [ 20 150]]
+              precision    recall  f1-score   support
+
+         0.0       0.79      0.78      0.78        95
+         1.0       0.88      0.88      0.88       170
+
+    accuracy                           0.85       265
+   macro avg       0.83      0.83      0.83       265
+weighted avg       0.84      0.85      0.85       265
+
+Mean Absolute Error: 4.135283877678637
+Mean Squared Error: 26.399958380115116
+Root Mean Squared Error: 5.1380889813349
+=======2607_index=======
+[[101  15]
+ [ 16 133]]
+              precision    recall  f1-score   support
+
+         0.0       0.86      0.87      0.87       116
+         1.0       0.90      0.89      0.90       149
+
+    accuracy                           0.88       265
+   macro avg       0.88      0.88      0.88       265
+weighted avg       0.88      0.88      0.88       265
+
+Mean Absolute Error: 0.8398632259728772
+Mean Squared Error: 1.3491697293520086
+Root Mean Squared Error: 1.1615376573112077
+=======2609_index=======
+[[ 75  16]
+ [ 16 157]]
+              precision    recall  f1-score   support
+
+         0.0       0.82      0.82      0.82        91
+         1.0       0.91      0.91      0.91       173
+
+    accuracy                           0.88       264
+   macro avg       0.87      0.87      0.87       264
+weighted avg       0.88      0.88      0.88       264
+
+Mean Absolute Error: 5.453785853963909
+Mean Squared Error: 51.36019607615896
+Root Mean Squared Error: 7.166602826734502
+=======2610_index=======
+[[ 96  17]
+ [ 14 138]]
+              precision    recall  f1-score   support
+
+         0.0       0.87      0.85      0.86       113
+         1.0       0.89      0.91      0.90       152
+
+    accuracy                           0.88       265
+   macro avg       0.88      0.88      0.88       265
+weighted avg       0.88      0.88      0.88       265
+
+Mean Absolute Error: 0.3942271060871627
+Mean Squared Error: 0.23757212756295282
+Root Mean Squared Error: 0.4874137129410218
+=======2615_index=======
+[[ 91  17]
+ [ 18 139]]
+              precision    recall  f1-score   support
+
+         0.0       0.83      0.84      0.84       108
+         1.0       0.89      0.89      0.89       157
+
+    accuracy                           0.87       265
+   macro avg       0.86      0.86      0.86       265
+weighted avg       0.87      0.87      0.87       265
+
+Mean Absolute Error: 12.84267240934552
+Mean Squared Error: 216.18311000677932
+Root Mean Squared Error: 14.703166665952587
+=======2618_index=======
+[[ 91  20]
+ [ 24 130]]
+              precision    recall  f1-score   support
+
+         0.0       0.79      0.82      0.81       111
+         1.0       0.87      0.84      0.86       154
+
+    accuracy                           0.83       265
+   macro avg       0.83      0.83      0.83       265
+weighted avg       0.84      0.83      0.83       265
+
+Mean Absolute Error: 0.6132246791911576
+Mean Squared Error: 0.5503642513721794
+Root Mean Squared Error: 0.7418653862879568
+=======2633_index=======
+[[44 10]
+ [13 30]]
+              precision    recall  f1-score   support
+
+         0.0       0.77      0.81      0.79        54
+         1.0       0.75      0.70      0.72        43
+
+    accuracy                           0.76        97
+   macro avg       0.76      0.76      0.76        97
+weighted avg       0.76      0.76      0.76        97
+
+Mean Absolute Error: 0.11169292331970826
+Mean Squared Error: 0.01711426397980961
+Root Mean Squared Error: 0.13082149662731124
+=======2634_index=======
+[[55 11]
+ [10 74]]
+              precision    recall  f1-score   support
+
+         0.0       0.85      0.83      0.84        66
+         1.0       0.87      0.88      0.88        84
+
+    accuracy                           0.86       150
+   macro avg       0.86      0.86      0.86       150
+weighted avg       0.86      0.86      0.86       150
+
+Mean Absolute Error: 0.1649879257202151
+Mean Squared Error: 0.04014778617507649
+Root Mean Squared Error: 0.20036912480488728
+=======2637_index=======
+[[ 76  15]
+ [ 20 131]]
+              precision    recall  f1-score   support
+
+         0.0       0.79      0.84      0.81        91
+         1.0       0.90      0.87      0.88       151
+
+    accuracy                           0.86       242
+   macro avg       0.84      0.85      0.85       242
+weighted avg       0.86      0.86      0.86       242
+
+Mean Absolute Error: 4.239323972906948
+Mean Squared Error: 22.818997568661477
+Root Mean Squared Error: 4.7769234417835795
+=======3034_index=======
+[[ 85  11]
+ [ 15 154]]
+              precision    recall  f1-score   support
+
+         0.0       0.85      0.89      0.87        96
+         1.0       0.93      0.91      0.92       169
+
+    accuracy                           0.90       265
+   macro avg       0.89      0.90      0.89       265
+weighted avg       0.90      0.90      0.90       265
+
+Mean Absolute Error: 13.943755067069572
+Mean Squared Error: 243.70331200473115
+Root Mean Squared Error: 15.61099971189325
+=======3035_index=======
+[[ 66  17]
+ [ 35 146]]
+              precision    recall  f1-score   support
+
+         0.0       0.65      0.80      0.72        83
+         1.0       0.90      0.81      0.85       181
+
+    accuracy                           0.80       264
+   macro avg       0.77      0.80      0.78       264
+weighted avg       0.82      0.80      0.81       264
+
+Mean Absolute Error: 5.6024303811969185
+Mean Squared Error: 33.146118572712936
+Root Mean Squared Error: 5.757266588643689
+=======3045_index=======
+[[ 89  36]
+ [ 26 111]]
+              precision    recall  f1-score   support
+
+         0.0       0.77      0.71      0.74       125
+         1.0       0.76      0.81      0.78       137
+
+    accuracy                           0.76       262
+   macro avg       0.76      0.76      0.76       262
+weighted avg       0.76      0.76      0.76       262
+
+Mean Absolute Error: 0.2806446523884782
+Mean Squared Error: 0.17555175788747335
+Root Mean Squared Error: 0.41898897108095023
+=======3596_index=======
+[[100  17]
+ [ 20 128]]
+              precision    recall  f1-score   support
+
+         0.0       0.83      0.85      0.84       117
+         1.0       0.88      0.86      0.87       148
+
+    accuracy                           0.86       265
+   macro avg       0.86      0.86      0.86       265
+weighted avg       0.86      0.86      0.86       265
+
+Mean Absolute Error: 1.6829123800025796
+Mean Squared Error: 3.2980816580197465
+Root Mean Squared Error: 1.8160621294492505
+=======3682_index=======
+[[93  9]
+ [16 57]]
+              precision    recall  f1-score   support
+
+         0.0       0.85      0.91      0.88       102
+         1.0       0.86      0.78      0.82        73
+
+    accuracy                           0.86       175
+   macro avg       0.86      0.85      0.85       175
+weighted avg       0.86      0.86      0.86       175
+
+Mean Absolute Error: 0.14409851880754754
+Mean Squared Error: 0.02415894080622622
+Root Mean Squared Error: 0.15543146658970383
+=======4904_index=======
+[[ 91  30]
+ [ 23 119]]
+              precision    recall  f1-score   support
+
+         0.0       0.80      0.75      0.77       121
+         1.0       0.80      0.84      0.82       142
+
+    accuracy                           0.80       263
+   macro avg       0.80      0.80      0.80       263
+weighted avg       0.80      0.80      0.80       263
+
+Mean Absolute Error: 0.14750791136302885
+Mean Squared Error: 0.03507826506160824
+Root Mean Squared Error: 0.18729192471008524
+=======5388_index=======
+[[113  22]
+ [ 16 114]]
+              precision    recall  f1-score   support
+
+         0.0       0.88      0.84      0.86       135
+         1.0       0.84      0.88      0.86       130
+
+    accuracy                           0.86       265
+   macro avg       0.86      0.86      0.86       265
+weighted avg       0.86      0.86      0.86       265
+
+Mean Absolute Error: 0.4295031041559187
+Mean Squared Error: 0.30355019999390004
+Root Mean Squared Error: 0.5509539000623374

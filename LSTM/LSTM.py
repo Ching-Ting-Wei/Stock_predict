@@ -44,7 +44,7 @@ df = df.drop(['X', 'diff'], axis=1)
 # df = df.drop(df.index[range(9)])
 
 
-split_boundary = 2600
+split_boundary = int(df.shape[0] * 0.9)
 train_data = df.head(split_boundary)
 test_data_reverse_date = df.tail(df.shape[0] - split_boundary)
 
@@ -152,17 +152,21 @@ if not os.path.isdir(output_directory):
   os.makedirs(output_directory)
 
 output_filename = output_directory + "/" + str(interval) + '_' + filename
-output_report = output_directory + "/" + str(interval) + '_' + (filename.split("."))[0] + '_report.txt'
+output_report = output_directory + "/" + str(interval) + '_report.txt'
 
-report_file = open(output_report, 'w')
+report_file = open(output_report, 'a')
+
+print("=======" + (filename.split("."))[0] + "=======", file=report_file)
 print(confusion_matrix(original_result_nparry, predict_0), file=report_file)
 print(classification_report(original_result_nparry, predict_0), file=report_file)
-report_file.close()
+print("Mean Absolute Error:",metrics.mean_absolute_error(real_close, predicted_stock_price_npary), file=report_file)
+print("Mean Squared Error:",metrics.mean_squared_error(real_close, predicted_stock_price_npary), file=report_file)
+print("Root Mean Squared Error:", np.sqrt(metrics.mean_squared_error(real_close, predicted_stock_price_npary)), file=report_file)
 
+report_file.close()
 backup_test.to_csv(output_filename, header = True, index = False)
-print("Mean Absolute Error:",metrics.mean_absolute_error(real_close, predicted_stock_price_npary))
-print("Mean Squared Error:",metrics.mean_squared_error(real_close, predicted_stock_price_npary))
-print("Root Mean Squared Error:", np.sqrt(metrics.mean_squared_error(real_close, predicted_stock_price_npary)))
+
+
 # Visualising the results
 plt.plot(real_close, color = 'red', label = 'Real Google Stock Price')  # 紅線表示真實股價
 plt.plot(predicted_stock_price_npary, color = 'blue', label = 'Predicted Google Stock Price')  # 藍線表示預測股價
